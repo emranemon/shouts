@@ -1,0 +1,14 @@
+body{
+    font-family: 'Philosopher';font-size: 18px;
+  }
+
+footer{
+    background-color: #f8f8f8; 
+    columns: #333333; 
+    padding: 15px;
+    position: fixed; 
+    left: 0; 
+    bottom: 0; 
+    width: 100%; 
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Confirm Delete
+{% endblock %}
+
+{% block body_block %}
+
+<h1>You can't get back once you delete.</h1>
+<form  method="post">
+{% csrf_token %}
+<h3> Are you sure you want to delete "<b>{{object.title}}</b>"? </h3>
+<input  type="submit"  value="Delete Permanently" class="btn btn-danger" />
+</form>
+
+{% endblock %}

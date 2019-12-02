@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Update Blog
+{% endblock %}
+
+{% block body_block %}
+<script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+
+<h1>Update your thoughts...</h1>
+
+<form  method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input class="btn btn-success" type="submit"  value="Submit"  />
+</form>
+
+<script>
+  var editor = new MediumEditor('.editable');
+</script>
+
+{% endblock %}

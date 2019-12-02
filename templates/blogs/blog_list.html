@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Blog lists
+{% endblock %}
+
+{% block body_block %}
+
+<div class="col-sm-9">
+    <form action="{% url 'blogs' %}" method="get">
+        <input name="search_key" type="text" placeholder="Search...">
+      </form>
+    <hr>
+    {% for blog in object_list %}
+      <h2>{{ blog.title }}</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by <b>{{ blog.author }}</b>, {{ blog.post_time }}</h5>
+      <p>{{ blog.article|safe|linebreaksbr|truncatewords:30 }}</p>
+      <a class="btn btn-link" href="{% url 'blog_detail'  blog.id  %}">Read More</a> 
+      <br><br>
+      <hr>
+    {% endfor %}
+</div>
+    
+{% endblock %}

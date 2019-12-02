@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+  edit this comment
+{% endblock %}
+
+{% block body_block %}
+<div type='hidden'>
+<h2>Edit your comment...</h2>
+</div>
+<form  method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input  type="submit" class="btn btn-success" value="Update"  />
+    </form>
+
+{% endblock %}

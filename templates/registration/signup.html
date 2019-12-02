@@ -1,0 +1,73 @@
+
+<!-- templates/signup.html -->
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block body_block %}
+  <h2>Sign Up if you are not registered yet.</h2>
+  <form method="post" class="form-horizontal">
+    {% csrf_token %}
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" >First Name:</label>
+          <div class="col-sm-10">
+            {{ form.first_name }}
+          </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Last Name:</label>
+            <div class="col-sm-10">
+              {{ form.last_name }}
+            </div>
+          </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >User ID:</label>
+            <div class="col-sm-10">
+              {{ form.username }}
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" >Email:</label>
+            <div class="col-sm-10">
+              {{ form.email }}
+            </div>
+          </div>
+          <!-- no avatar 
+          <div class="form-group">
+            <label class="control-label col-sm-2" >Avatar:</label>
+            <div class="col-sm-10">
+              {{ form.profile_pic }}
+            </div>
+          </div>
+        -->
+          <div class="form-group">
+            <label class="control-label col-sm-2" >Portfolio:</label>
+            <div class="col-sm-10">
+              {{ form.portfolio_site }}
+            </div>
+          </div> 
+        <div class="form-group">
+          <label class="control-label col-sm-2" >Password:</label>
+          <div class="col-sm-10">          
+              {{ form.password1 }}
+          </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Confirm Password:</label>
+            <div class="col-sm-10">          
+                {{ form.password2 }}
+            </div>
+          </div>
+
+        <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Sign Up</button>
+          </div>
+        </div>
+
+
+
+
+  </form>
+{% endblock %}
