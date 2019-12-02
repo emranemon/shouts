@@ -8,6 +8,7 @@
 * User Authentications (Account Creation, Log in, Sign up)
 * Post, Edit Post, Delete Post
 * Comment, Edit Comment, Delete Comment
+* Can search by user input
 * Shows sentiment polarity of each comments (only for 3 specific languages)
   * Japanese
   * Bangla
